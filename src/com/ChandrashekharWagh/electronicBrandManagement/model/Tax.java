@@ -1,4 +1,4 @@
 package com.ChandrashekharWagh.electronicBrandManagement.model;
 
-public class address {
+public class Tax {
 }
