@@ -5,13 +5,16 @@ public class Product {
     private String name;
     private String description;
     private double price;
+    private Supplier supplier; // Add Supplier field
 
 
-    public Product(int id, String name, String description, double price) {
+
+    public Product(int id, String name, String description, double price, Supplier supplier) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
+        this.supplier = supplier;
     }
 
 
@@ -23,8 +26,10 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
+                ", supplier=" + supplier +
                 '}';
     }
 
 
 }
+
