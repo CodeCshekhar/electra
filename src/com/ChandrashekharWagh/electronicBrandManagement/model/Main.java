@@ -23,7 +23,7 @@ public class Main {
 
         // Create customer
         Address customerAddress = new Address("123 Main St", "Springfield", "IL", "62701", "USA");
-        List<Order> orders = Arrays.asList(order);
+        List<Order> orders = List.of(order);
         Customer customer = new Customer(1, "John Doe", "john.doe@example.com", "555-1234", customerAddress, orders);
 
         // Print customer details
