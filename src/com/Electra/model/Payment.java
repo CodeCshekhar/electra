@@ -1,4 +1,4 @@
-package com.ChandrashekharWagh.electronicBrandManagement.model;
+package com.Electra.model;
 
 import java.util.Date;
 
