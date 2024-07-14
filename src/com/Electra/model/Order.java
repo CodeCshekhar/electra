@@ -11,7 +11,45 @@ public class Order {
     private Payment payment;
 
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Product getProducts() {
+        return products;
+    }
+
+    public void setProducts(Product products) {
+        this.products = products;
+    }
+
+    public double getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(double totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
 
     public Order(int id, Date date, List<Product> products, double totalAmount, Payment payment) {
         this.id = id;

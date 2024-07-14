@@ -9,6 +9,45 @@ public class Payment {
     private Date paymentDate;
     private double amount;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getPaymentType() {
+        return paymentType;
+    }
+
+    public void setPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+    }
+
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
+    }
+
+    public Date getPaymentDate() {
+        return paymentDate;
+    }
+
+    public void setPaymentDate(Date paymentDate) {
+        this.paymentDate = paymentDate;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
 
     public Payment(int id, String paymentType, String transactionId, Date paymentDate, double amount) {
         this.id = id;
