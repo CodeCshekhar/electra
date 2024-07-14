@@ -32,7 +32,7 @@ CREATE TABLE supplier (
 
 -- Table for Customer entity
 CREATE TABLE customer (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     contact_number VARCHAR(20),
     email VARCHAR(100),
