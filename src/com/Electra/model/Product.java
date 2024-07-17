@@ -1,18 +1,32 @@
 package com.Electra.model;
 
 public class Product {
-    private int id;
+    private Long id;
     private String name;
     private String description;
-    private double price;
-    private Supplier supplier; // Add Supplier field
+    private Double price;
+    private Brand brand;
+    private Supplier supplier;
+
+    // Constructors, getters, setters, and other methods
+
+    public Product(Long id, String name, String description, Double price, Brand brand, Supplier supplier) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.brand = brand;
+        this.supplier = supplier;
+    }
 
 
-    public int getId() {
+    // Getters and Setters (omitted for brevity)
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -32,12 +46,20 @@ public class Product {
         this.description = description;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Brand getBrand() {
+        return brand;
+    }
+
+    public void setBrand(Brand brand) {
+        this.brand = brand;
     }
 
     public Supplier getSupplier() {
@@ -48,16 +70,6 @@ public class Product {
         this.supplier = supplier;
     }
 
-    public Product(int id, String name, String description, double price, Supplier supplier) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.price = price;
-        this.supplier = supplier;
-    }
-
-
-
     @Override
     public String toString() {
         return "Product{" +
@@ -65,10 +77,9 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
+                ", brand=" + brand +
                 ", supplier=" + supplier +
                 '}';
     }
-
-
 }
 

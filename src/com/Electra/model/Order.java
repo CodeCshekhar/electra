@@ -1,77 +1,65 @@
 package com.Electra.model;
 
 import java.util.Date;
-import java.util.List;
 
 public class Order {
-    private int id;
-    private Date date;
-    private Product products;
-    private double totalAmount;
-    private Payment payment;
+    private Long id;
+    private Product product;
+    private Customer customer;
+    private Date orderDate;
+
+    // Constructors, getters, setters, and other methods
+
+    public Order(Long id, Product product, Customer customer, Date orderDate) {
+        this.id = id;
+        this.product = product;
+        this.customer = customer;
+        this.orderDate = orderDate;
+    }
 
 
-    public int getId() {
+    // Getters and Setters (omitted for brevity)
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Date getDate() {
-        return date;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
-    public Product getProducts() {
-        return products;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setProducts(Product products) {
-        this.products = products;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
-    public double getTotalAmount() {
-        return totalAmount;
+    public Date getOrderDate() {
+        return orderDate;
     }
 
-    public void setTotalAmount(double totalAmount) {
-        this.totalAmount = totalAmount;
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
     }
-
-    public Payment getPayment() {
-        return payment;
-    }
-
-    public void setPayment(Payment payment) {
-        this.payment = payment;
-    }
-
-    public Order(int id, Date date, List<Product> products, double totalAmount, Payment payment) {
-        this.id = id;
-        this.date = date;
-        this.products = (Product) products;
-        this.totalAmount = totalAmount;
-        this.payment = payment;
-    }
-
-
 
     @Override
     public String toString() {
         return "Order{" +
                 "id=" + id +
-                ", date=" + date +
-                ", products=" + products +
-                ", totalAmount=" + totalAmount +
-                ", payment=" + payment +
+                ", product=" + product +
+                ", customer=" + customer +
+                ", orderDate=" + orderDate +
                 '}';
     }
-
-
 }
 

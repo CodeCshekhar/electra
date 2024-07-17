@@ -1,11 +1,32 @@
 package com.Electra.model;
 
 public class Address {
+    private Long id;
     private String street;
     private String city;
     private String state;
-    private String zipCode;
     private String country;
+    private String postalCode;
+
+    // Constructors, getters, setters, and other methods
+
+    public Address(String street, String city, String state, String country, String postalCode) {
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        this.postalCode = postalCode;
+    }
+
+    // Getters and Setters (omitted for brevity)
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getStreet() {
         return street;
@@ -31,14 +52,6 @@ public class Address {
         this.state = state;
     }
 
-    public String getZipCode() {
-        return zipCode;
-    }
-
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
-    }
-
     public String getCountry() {
         return country;
     }
@@ -47,25 +60,23 @@ public class Address {
         this.country = country;
     }
 
-    public Address(String street, String city, String state, String zipCode, String country) {
-        this.street = street;
-        this.city = city;
-        this.state = state;
-        this.zipCode = zipCode;
-        this.country = country;
+    public String getPostalCode() {
+        return postalCode;
     }
 
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
 
     @Override
     public String toString() {
         return "Address{" +
-                "street='" + street + '\'' +
+                "id=" + id +
+                ", street='" + street + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
-                ", zipCode='" + zipCode + '\'' +
                 ", country='" + country + '\'' +
+                ", postalCode='" + postalCode + '\'' +
                 '}';
     }
-
-
 }

@@ -3,34 +3,39 @@ package com.Electra.model;
 import java.util.Date;
 
 public class Payment {
-    private int id;
-    private String paymentType;
-    private String transactionId;
+    private Long id;
+    private Double amount;
     private Date paymentDate;
-    private double amount;
+    private Customer customer;
+    private Order order;
 
-    public int getId() {
+    // Constructors, getters, setters, and other methods
+
+    public Payment(Long id, Double amount, Date paymentDate, Customer customer, Order order) {
+        this.id = id;
+        this.amount = amount;
+        this.paymentDate = paymentDate;
+        this.customer = customer;
+        this.order = order;
+    }
+
+
+    // Getters and Setters (omitted for brevity)
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getPaymentType() {
-        return paymentType;
+    public Double getAmount() {
+        return amount;
     }
 
-    public void setPaymentType(String paymentType) {
-        this.paymentType = paymentType;
-    }
-
-    public String getTransactionId() {
-        return transactionId;
-    }
-
-    public void setTransactionId(String transactionId) {
-        this.transactionId = transactionId;
+    public void setAmount(Double amount) {
+        this.amount = amount;
     }
 
     public Date getPaymentDate() {
@@ -41,33 +46,30 @@ public class Payment {
         this.paymentDate = paymentDate;
     }
 
-    public double getAmount() {
-        return amount;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
-    public Payment(int id, String paymentType, String transactionId, Date paymentDate, double amount) {
-        this.id = id;
-        this.paymentType = paymentType;
-        this.transactionId = transactionId;
-        this.paymentDate = paymentDate;
-        this.amount = amount;
+    public Order getOrder() {
+        return order;
     }
 
+    public void setOrder(Order order) {
+        this.order = order;
+    }
 
     @Override
     public String toString() {
         return "Payment{" +
                 "id=" + id +
-                ", paymentType='" + paymentType + '\'' +
-                ", transactionId='" + transactionId + '\'' +
-                ", paymentDate=" + paymentDate +
                 ", amount=" + amount +
+                ", paymentDate=" + paymentDate +
+                ", customer=" + customer +
+                ", order=" + order +
                 '}';
     }
-
-
 }

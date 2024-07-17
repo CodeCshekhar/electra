@@ -1,17 +1,17 @@
 package com.Electra.model;
 
-public class Supplier {
+public class Brand {
     private Long id;
     private String name;
-    private String contactInfo;
+    private String description;
     private Address address;
 
     // Constructors, getters, setters, and other methods
 
-    public Supplier(Long id, String name, String contactInfo, Address address) {
+    public Brand(Long id, String name, String description, Address address) {
         this.id = id;
         this.name = name;
-        this.contactInfo = contactInfo;
+        this.description = description;
         this.address = address;
     }
 
@@ -34,12 +34,12 @@ public class Supplier {
         this.name = name;
     }
 
-    public String getContactInfo() {
-        return contactInfo;
+    public String getDescription() {
+        return description;
     }
 
-    public void setContactInfo(String contactInfo) {
-        this.contactInfo = contactInfo;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Address getAddress() {
@@ -52,10 +52,10 @@ public class Supplier {
 
     @Override
     public String toString() {
-        return "Supplier{" +
+        return "Brand{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", contactInfo='" + contactInfo + '\'' +
+                ", description='" + description + '\'' +
                 ", address=" + address +
                 '}';
     }
