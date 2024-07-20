@@ -1,5 +1,7 @@
 package com.Electra.model;
 
+
+
 public class Address {
     private Long id;
     private String street;
@@ -9,7 +11,6 @@ public class Address {
     private String postalCode;
 
     // Constructors, getters, setters, and other methods
-
     public Address(String street, String city, String state, String country, String postalCode) {
         this.street = street;
         this.city = city;
@@ -66,6 +67,7 @@ public class Address {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+
     }
 
     @Override
@@ -80,3 +82,4 @@ public class Address {
                 '}';
     }
 }
+
