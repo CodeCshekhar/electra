@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>Electronic Management System</h1>
+<h1>Electronic Management System - Electra</h1>
 
 <h2>Overview</h2>
 <p>The Electronic Management System is a comprehensive solution designed to streamline and automate the management of electronic devices, records, and related workflows. This system offers a user-friendly interface, robust features, and scalable architecture, making it suitable for businesses, educational institutions, and other organizations.</p>
