@@ -4,15 +4,15 @@ public class Brand {
     private Long id;
     private String name;
     private String description;
-    private Address address;
+
 
     // Constructors, getters, setters, and other methods
 
-    public Brand(Long id, String name, String description, Address address) {
+    public Brand(Long id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.address = address;
+
     }
 
 
@@ -42,21 +42,12 @@ public class Brand {
         this.description = description;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
     @Override
     public String toString() {
         return "Brand{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", address=" + address +
                 '}';
     }
 }
